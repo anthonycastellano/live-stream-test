@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Stream</title>
+    <style>
+      #main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="//cdn.flowplayer.com/players/ffdf2c44-aa29-4df8-a270-3a199a1b119e/native/flowplayer.async.js"></script>
+    <div id="main">
+      <h1>Stream</h1>
+      <div id="player"></div>
+      <script>
+        flowplayer("#player", {
+          src: "//localhost:8080/hls/test.m3u8",
+          autoplay: 1,
+          live: true,
+          title: "Tony's stream"
+        });
+      </script>
+    </div>
+  </body>
+</html>
