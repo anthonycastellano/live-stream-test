@@ -20,7 +20,7 @@
       <div id="player"></div>
       <script>
         flowplayer("#player", {
-          src: "//localhost:8080/hls/test.m3u8",
+          src: `//${window.location.hostname}:8080/hls/test.m3u8`,
           autoplay: 1,
           live: true,
           title: "Tony's stream"
